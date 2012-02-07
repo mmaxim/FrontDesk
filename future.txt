@@ -1,0 +1,57 @@
+Feedback System:
+	- Get a list of the people who have not submitted (dont know where this can go)
+
+Grade Report:
+	- show the number of comments made for each category of subjective evaluation
+	- Details: indicate the name of the user that has been selected
+	- Increase the number of students displayed
+
+Security
+	- File system needs more method authorizations
+		- Copy directory is a security hole, ObtainDirLock may need to be augmented to also check
+		- Security hole for CreateFile, since the operation goes unchecked. for permissions.
+		- Deal with c:\system perm hack
+		- At least make it so only READs are let through
+		- Delete's interaction with file locks
+		- Check the percolatemodified runs on every file op
+Functionality
+	- Web
+		- Fill out subname functionality for all submission retrieval funcs
+		- Fix up feedback system main page ***
+		- Submission Transaction Log ***
+		- Performance *** (Access layer, Web, database)
+		- Editting in the feedback file view mode, the text box is too big
+		- Regions on the matrix view pagelets (like VS region modes)
+		- Sorted datagrid using the UserGrouper module
+		- Create new course roles from web UI (Pauper)
+		- More archive types supported
+		- Plugin arch for evaluation managers
+		- Bug with pages in user selection for permission matrix page (selected index)
+		- Adapter in between coursematrix and MS TreeView control
+		- CSV/Excel export
+		- Backups stored in FDFS
+		- Delete of an asst should override locks
+		- CVS server registration (submission save box, admin create entry), ext protocol
+		- CVS submit of tests 
+		- Error handling in asst format thing
+	- Testing
+		- CppUnit package support
+		- More elaborate UI for testing center
+		- Windows Service-ize testing center (sockets)
+		- Jailing ***
+		- Competitive
+		- jdisco.pl build point loss hack ***
+		- Zone synchro? ***
+	- File system
+		- Rename flakyness
+Bugs
+	- Diagnostics (NUnit)
+	- Profiling
+	- UI bugs
+	- Threading issues
+	- Memory issues
+	- Session issues
+Long Term
+	- Discussion Groups
+	- Emailing
+	- Quizzes (?)

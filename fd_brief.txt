@@ -1,0 +1,50 @@
+Strawman Description of FrontDesk Architecture
+Mike
+
+0.) Experimentation
+	Feel free to experiment around and check out existing code. Before you check anything in, make sure its clean though. The best thing to do is to ask me questions, its decently hard to get this all down on paper, but I will keep updating this document. This is a first start.	
+
+1.) Main topology
+	FrontDesk.Core assembly
+		Access - How external assemblies access data given through the Provider layer. External assemblies cannot directly access the Provider layer. Access layer objects are created as such in the FrontDesk.WWW
+		new Results(Globals.CurrentIdentity);
+	In something like the testing center, Access objects are created like this:
+		new Results(m_ident);
+	Where m_ident is obtained through the Web service authentication mechanism and is of type AuthorizedIdent. An AuthorizedIdent cannot be forged.
+
+		The most important thing about the Access layer is that it implements the rules of all data access. This includes simple sanity checks, and most importantly, permissions. Whenever an operation encounters an error in this layer, a DataAccessException is generated. Typically FrontDesk.WWW classes will do something like this:
+		try {
+			new Results(Globals.CurrentIdentity).Update(res);
+		} catch (CustomException er) {
+			PageError(er.Message);
+		}
+		
+		This is how error reporting works. Only transaction style access operations are protected by the try, not stuff like GetInfo(), those are assumed to work (a reasonable assumption).
+
+		FileSystem - Implements the entire file system inluding retrieval of data, management of all file records, and file permissions. TO obtain access to the file system, typically external and internal assemblies will hit a:
+		new FileSystem(Globals.CurrentIdentity);
+		
+		Provider - Low level data access, basically just invokes stored procedures or simple SQL queries/statements. This probably will never need to be dealt with directly, and it is essentially bugfree. 
+
+	FrontDesk.WWW assembly
+		Controls/Matrix - The CourseMatrix is the control that does everything. I will give a couple of common operations one typically does with the CourseMatrix.
+		
+		1.) Adding a new node type - The best way to discover how this works is to check out an existing node type like Course. Notice the functions, AddCourseNode, LoadCourseNode, LoadViews, LoadNode, and maybe SwitchView. Heres what happens when the courseMatrix loads.  A root node is specified (the Course node). When a user clicks expand, LoadNode() is called. LoadNode() will proceed to invoked the correct LoadXXXNode(), where XXX is the node type. LoadXXXNode() will then get all the data it needs from the Access layer usually, and go through a series of AddXXXNode()'s to fill in its children. If the user selects a node, ActivateNodeView() will go through the motions to fire up the correct .ascx file in the right pane.
+
+			a.) A word on those controls displayed in the right pane - Those controls that are displayed on the right side implement an interface, IMatrixControl. IMatrixControl has a bunch of functionality that helps coordinate the interaction with the Matrix. The most important are Activate() and the Refresh event. Activate() sends the information from the Matrix to the MatrixControl object. This is usually like a AsstID, or SubID. But its always an ID. There is an Auxiliary field in the ActivateParams class, but you shouldnt have to worry about it. 
+
+		2.) State Management - A question that comes naturally when pondering the nature of the Matrix is how it keeps track of all the information. The answer is that it stores all the info in the NodeData field in the TreeNode class (from the MS TreeView conntrol). NodeData is a string, and FD uses this format
+		<node type> <id> <param1> <param2> ...
+	This is how the matrix keeps track. NodeData is stored in a ASP.NET notion called the ViewState. The ViewState is a *beat* system that gives the notion of stateful programming model. What happens is that all data in the ViewState is serialized and then !*encrypted*! and stuck onto the page the browser gets. This is usually like 4K of data. 
+
+		3.) New Modules - How does one create a new module for the right pane? It is pretty simple, most of the time one can simply copy/paste an existing .ascx file and fill in the blanks. All  the flow of the control is sort of Matrix agnostic, until it updates data. Then it invokes the Refresh event, which allows the Matrix to refresh its tree display of all the info. Refresh is hideous and I am not proud of it, so if you need something complicated to send back to the Matrix, let me know, we can make it happen. The best thing to do is check out an existing MatrixControl.
+
+	Testing Libraries
+
+		JUnit - fd_junit.jar contains JUnit and FrontDesk classes to facillitate adding points to tests and outputting the correct XML format for the testing center. jdisco.pl et. al. are there to support native JUnit support. It hooks in, and does its thing. Check out the .xsd files for both automatic results and subjective results. They dictate what XML should look like.
+
+	Other assemblies
+		FrontDesk.Services - The Web Service package. 
+		FrontDesk.Testing - The testing center library.
+		FrontDesk.Testing.Win32 - The GUI front-end to the testing center library.
+		ForntDesk.Application.Submission - The greatest program yet written.

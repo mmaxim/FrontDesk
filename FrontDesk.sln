@@ -1,0 +1,61 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontDesk.Core", "FrontDesk.Data\FrontDesk.Core.csproj", "{668892BA-7EB4-4845-A674-36F4FA60A48F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontDesk.Services", "http://localhost/FrontDeskServices/FrontDesk.Services.csproj", "{BF0AF9D4-86F4-46ED-B0CE-BE892897C026}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontDesk.Applications.Submission", "FrontDesk.Applications.Submission\FrontDesk.Applications.Submission.csproj", "{DCD5CD7C-C35E-4B9D-B30E-E349541E9B0B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontDesk.WWW", "http://localhost/FrontDesk/FrontDesk.WWW.csproj", "{4B9C60D2-5620-427B-BBBA-21E37D4B6C63}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontDesk.Testing", "FrontDesk.Testing\FrontDesk.Testing.csproj", "{150BE844-3DD5-4E24-B79F-E898FE3660B1}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontDesk.Testing.Win32", "FrontDesk.Testing.Win32\FrontDesk.Testing.Win32.csproj", "{AFE7C461-DCFA-41BD-89A4-4A5FD1C9FF85}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{668892BA-7EB4-4845-A674-36F4FA60A48F}.Debug.ActiveCfg = Debug|.NET
+		{668892BA-7EB4-4845-A674-36F4FA60A48F}.Debug.Build.0 = Debug|.NET
+		{668892BA-7EB4-4845-A674-36F4FA60A48F}.Release.ActiveCfg = Release|.NET
+		{668892BA-7EB4-4845-A674-36F4FA60A48F}.Release.Build.0 = Release|.NET
+		{BF0AF9D4-86F4-46ED-B0CE-BE892897C026}.Debug.ActiveCfg = Debug|.NET
+		{BF0AF9D4-86F4-46ED-B0CE-BE892897C026}.Debug.Build.0 = Debug|.NET
+		{BF0AF9D4-86F4-46ED-B0CE-BE892897C026}.Release.ActiveCfg = Release|.NET
+		{BF0AF9D4-86F4-46ED-B0CE-BE892897C026}.Release.Build.0 = Release|.NET
+		{DCD5CD7C-C35E-4B9D-B30E-E349541E9B0B}.Debug.ActiveCfg = Debug|.NET
+		{DCD5CD7C-C35E-4B9D-B30E-E349541E9B0B}.Debug.Build.0 = Debug|.NET
+		{DCD5CD7C-C35E-4B9D-B30E-E349541E9B0B}.Release.ActiveCfg = Release|.NET
+		{DCD5CD7C-C35E-4B9D-B30E-E349541E9B0B}.Release.Build.0 = Release|.NET
+		{4B9C60D2-5620-427B-BBBA-21E37D4B6C63}.Debug.ActiveCfg = Debug|.NET
+		{4B9C60D2-5620-427B-BBBA-21E37D4B6C63}.Debug.Build.0 = Debug|.NET
+		{4B9C60D2-5620-427B-BBBA-21E37D4B6C63}.Release.ActiveCfg = Release|.NET
+		{4B9C60D2-5620-427B-BBBA-21E37D4B6C63}.Release.Build.0 = Release|.NET
+		{150BE844-3DD5-4E24-B79F-E898FE3660B1}.Debug.ActiveCfg = Debug|.NET
+		{150BE844-3DD5-4E24-B79F-E898FE3660B1}.Debug.Build.0 = Debug|.NET
+		{150BE844-3DD5-4E24-B79F-E898FE3660B1}.Release.ActiveCfg = Release|.NET
+		{150BE844-3DD5-4E24-B79F-E898FE3660B1}.Release.Build.0 = Release|.NET
+		{AFE7C461-DCFA-41BD-89A4-4A5FD1C9FF85}.Debug.ActiveCfg = Debug|.NET
+		{AFE7C461-DCFA-41BD-89A4-4A5FD1C9FF85}.Debug.Build.0 = Debug|.NET
+		{AFE7C461-DCFA-41BD-89A4-4A5FD1C9FF85}.Release.ActiveCfg = Release|.NET
+		{AFE7C461-DCFA-41BD-89A4-4A5FD1C9FF85}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
