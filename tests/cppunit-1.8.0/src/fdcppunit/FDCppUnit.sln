@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FDCppUnit", "FDCppUnit.vcproj", "{B77F38C7-0F4D-4978-B5A3-304901EC5B89}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FiboTest", "FiboTest\FiboTest.vcproj", "{07B8916D-6421-4363-A266-6D07358C9B64}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B77F38C7-0F4D-4978-B5A3-304901EC5B89} = {B77F38C7-0F4D-4978-B5A3-304901EC5B89}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B77F38C7-0F4D-4978-B5A3-304901EC5B89}.Debug.ActiveCfg = Debug|Win32
+		{B77F38C7-0F4D-4978-B5A3-304901EC5B89}.Debug.Build.0 = Debug|Win32
+		{B77F38C7-0F4D-4978-B5A3-304901EC5B89}.Release.ActiveCfg = Release|Win32
+		{B77F38C7-0F4D-4978-B5A3-304901EC5B89}.Release.Build.0 = Release|Win32
+		{07B8916D-6421-4363-A266-6D07358C9B64}.Debug.ActiveCfg = Debug|Win32
+		{07B8916D-6421-4363-A266-6D07358C9B64}.Debug.Build.0 = Debug|Win32
+		{07B8916D-6421-4363-A266-6D07358C9B64}.Release.ActiveCfg = Release|Win32
+		{07B8916D-6421-4363-A266-6D07358C9B64}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

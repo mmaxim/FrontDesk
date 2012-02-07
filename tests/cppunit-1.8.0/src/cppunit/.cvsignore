@@ -1,0 +1,7 @@
+Debug
+DebugDLL
+*.lo
+.libs
+Release
+ReleaseDLL
+libcppunit.la

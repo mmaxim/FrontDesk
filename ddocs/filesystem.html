@@ -1,0 +1,79 @@
+<HTML>
+
+<font size="5" color="#ff0000"><b>File System Architecture</b></font><hr>
+<br>
+
+The main revelation for the FrontDesk file system is the notion of storing
+all data in the main database. Access to files is done through the
+IFrontDeskDataProvider layer and <b>not</b> through the underlying OS file
+system. <br><br>
+
+<b>Reasons:</b>
+<ul>
+<li>By using the file system you are also using the OS, would rather
+not.</li>
+<li>Using the database effectively make the file system available to any
+client that can connect to the database. This includes clients on different
+computers, particulary <b>Testing Centers</b>.
+<li>Database transactions can help with shared file editing</li>
+</ul>
+<br>
+
+There are two tables in the database used to implements the file
+system. The <b>Files</b> table which contains all the files (and
+directories) given by their
+name, modification date, creation date, parent directories, and actual
+data. Directory structure is given in the <b>Directories</b> table which
+contains mappings from dirrectory IDs to file IDs effectively encoding a
+UNIX style "inode table" in the database.<br><br>
+
+The question then becomes, how does one access files?
+<pre>
+public interface IFrontDeskDataProvider {
+
+    public File[] ListDirectory(File directory);
+    public File GetDirectory(String path);
+    public StringBuffer GetFileData(File file);
+
+    //And more!
+}
+</pre>
+<br>
+
+All file access goes through the IFrontDeskDataProvider module. This
+abstracts away the fact that FrontDesk is using a database for storing and
+retrieving files. FrontDesk has no idea what is going on when it calls for
+ListDirectory for instance, it is all taken care of behind the scenes in a
+FrontDesk data provider implementation. For example:
+
+<pre>
+public class SqlFrontDeskDataProvider : IFrontDeskDataProvider {
+
+    public File[] ListDirectory(File directory) {
+	//Invoke SQL stored procedure to obtain directory listing
+    }
+}
+</pre>
+<br>
+
+Here we can be very efficient about getting a directory listing by simply
+invoking an SQL server stored procedure. Our generic SQL engine data
+provider can do the same thing, just slightly less efficiently.
+<br><br>
+
+<b>Advantages:</b>
+<ul>
+<li>All file data in one place</li>
+<li>Available to Testing Center's in a very seamless fashion</li>
+<li>Abstracted away by the data provider data layer</li>
+<li>Transactions can help in locking issues with editing</li>
+</ul>
+
+<b>Disadvantages:</b>
+<ul>
+<li>Efficiency could become a concern</li>
+<li>Somewhat awkward problem of not being able to manually edit files</li>
+</ul>
+
+
+</HTML>

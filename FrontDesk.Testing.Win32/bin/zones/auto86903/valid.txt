@@ -1,0 +1,7 @@
+5
+a b
+c a
+a e
+b d
+d a
+x a

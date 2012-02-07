@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestSuite xmlns="urn:frontdesk-result">
+	<Test>
+		<Name>Test: generateText() for a non-existent input file.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: generateText() on an invalid input file.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: generateText() on a non-existent input file.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: generateText() on a valid input sequence.</Name>
+		<Points>2.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: buildTrie() on a non-existent input file.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: buildTrie() on a valid input file.</Name>
+		<Points>2.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Basic Test: generateSentence() on small input.</Name>
+		<Points>3.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Basic Test: generateSentence() on medium input.</Name>
+		<Points>3.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Basic Test: generateSentence() on large input.</Name>
+		<Points>4.0</Points>
+		<Time>20</Time>
+	</Test>
+	<Test>
+		<Name>Basic Test 2: generateSentence() on small input with STOP.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Basic Test 2: generateSentence() on medium input with STOP.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Basic Test 2: generateSentence() on large input with STOP.</Name>
+		<Points>2.0</Points>
+		<Time>20</Time>
+	</Test>
+	<Test>
+		<Name>Comprehensive Test: generateSentence() on small input.</Name>
+		<Points>3.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Comprehensive Test: generateSentence() on medium input.</Name>
+		<Points>3.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Comprehensive Test: generateSentence() on large input.</Name>
+		<Points>4.0</Points>
+		<Time>20</Time>
+	</Test>
+	<Test>
+		<Name>Test: getTrie() before buildTrie() has been called.</Name>
+		<Points>2.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: numWords() on small input.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: numWords() on medium input.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: numWords() on large input.</Name>
+		<Points>2.0</Points>
+		<Time>20</Time>
+	</Test>
+	<Test>
+		<Name>Test: insertGram() on invalid input.</Name>
+		<Points>3.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: generateNext() on invalid input.</Name>
+		<Points>2.0</Points>
+		<Time>20</Time>
+	</Test>
+	<Test>
+		<Name>Test: generateNext() on small input.</Name>
+		<Points>2.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: generateNext() on medium input.</Name>
+		<Points>2.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: generateNext() on large input.</Name>
+		<Points>3.0</Points>
+		<Time>20</Time>
+	</Test>
+	<Test>
+		<Name>Test: generateNext() on small input with STOP.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: generateNext() on medium input with STOP.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: generateNext() on large input with STOP.</Name>
+		<Points>1.0</Points>
+		<Time>20</Time>
+	</Test>
+	<Test>
+		<Name>Test: sizeLevel0() on small input.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: sizeLevel0() on medium input.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: sizeLevel0() on large input.</Name>
+		<Points>2.0</Points>
+		<Time>20</Time>
+	</Test>
+	<Test>
+		<Name>Test: sizeLevel1() on small input.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: sizeLevel1() on medium input.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: sizeLevel1() on large input.</Name>
+		<Points>2.0</Points>
+		<Time>20</Time>
+	</Test>
+	<Test>
+		<Name>Test: sizeLevel2() on small input.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: sizeLevel2() on medium input.</Name>
+		<Points>1.0</Points>
+		<Time>5</Time>
+	</Test>
+	<Test>
+		<Name>Test: sizeLevel2() on large input.</Name>
+		<Points>2.0</Points>
+		<Time>20</Time>
+	</Test>
+</TestSuite>

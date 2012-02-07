@@ -1,0 +1,59 @@
+Testing Ideas (Gymnast)
+
+*BackEnd
+- Build procedure is a test
+- Tests are i, Users j
+- Cache user submissions (build only takes place once)
+- List external program support per center
+- External support for build/test must be KNOWN by testing center
+	- Perl
+	- Make
+	- Python
+
+- Multiple result views
+
+- XML result description
+	- certain test APIs come with XML conversion pre-made
+	<?xml version=1.0 />
+	<Result success="false">
+		<Time>10</Time>
+		<Competetive>-10</Competetive>
+		<API>JUnit</API>
+		
+		<Error name="basic" points="10">ArrayIndexOutOfBounds Exception!</Error>
+
+		<Failure name="basic" points="5">F(10) reported as 43. Should be 88</Failure>
+		<Failure name="basic" points="5">F(9) reported as 35. Should be 73</Failure>	
+	</Result>
+
+- Time limits
+- Protected test directory. Test center should run under a testing account
+- gather tests from central databse
+- Tests and Test Suites
+	- Test stuites contain multiple tests (defined by the suite in the result descriptor)
+
+-Evaluation Table
+	- ID
+	- evalTypeID (automatic, quiz, ...)
+	- timeLimit (time limit for the evaluation)
+	- courseID
+	- asstID
+	- pretest
+-Automatic Table
+	-locationID (location of testfiles)
+	-evalID (foreign key into eval table)
+	-rebuild (do a build before running the test)
+	-builID (eval id of build for this test)
+	-tool (tool used to run the test)
+	-toolFile (file to be used by the tool in running the test)
+-Jobs Table
+	-ID
+	-evalID (ID of the evaluation)
+	-principalID (ID of the evaluatee)
+	-processing (is the job being processed)
+-EvaluationTypes Table
+	-ID
+	-name (automatic, quiz, etc)
+
+*FrontEnd
+- Detailed description of what is going on

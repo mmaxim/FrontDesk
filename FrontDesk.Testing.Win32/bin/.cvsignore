@@ -1,0 +1,12 @@
+Microsoft.Web.UI.WebControls.dll
+testlog.txt
+FrontDesk.dll
+FrontDesk.Testing.dll
+FrontDesk.Testing.Win32.exe
+ICSharpCode.SharpZipLib.dll
+*.pdb
+FrontDesk.Core.dll
+FrontDesk.Testing.Win32.exe.config
+Release
+log4net.dll
+ICSharpCode.SharpCvsLib.dll

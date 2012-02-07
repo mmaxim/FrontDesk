@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Users>
+	<User>
+		<UserName>hadster</UserName>
+		<Role>Student</Role>
+	</User>
+	<User>
+		<UserName>abortz</UserName>
+		<Role>Student</Role>
+	</User>
+	<User>
+		<UserName>arv</UserName>
+		<Role>TA</Role>
+	</User>
+	<User>
+		<UserName>cychung</UserName>
+		<Role>TA</Role>
+	</User>
+	<User>
+		<UserName>bkb</UserName>
+		<Role>Student</Role>
+	</User>
+	<User>
+		<UserName>jmaxim</UserName>
+		<Role>Student</Role>
+	</User>
+	<User>
+		<UserName>petel</UserName>
+		<Role>Instructor</Role>
+	</User>
+</Users>

@@ -1,0 +1,25 @@
+-- Subjective Grading
+
+Comments - done
+
+Rubric - XML Format.
+
+	Presentation - Transform database tree into TreeView
+	Layer - Collect point values from RubricResults and ResultsCode
+
+Creation. User defines either XSD schema for rubric and uploads,
+		or uses presentation controls to have interface
+		construct XSD schema for them.
+
+SubjEvaluation
+	(evalID, rubricID, points) 
+
+RubricForest (ID, parentID, points, desc, gradeable)
+CannedComments (rubricID, points, comment)
+
+
+RubricResults
+	(evalID, rubricID, points, comment, type{error,warning,good})
+
+Replication of inline comments into the rubric grades as warnings (0 points)
+Helps keep things summarized.

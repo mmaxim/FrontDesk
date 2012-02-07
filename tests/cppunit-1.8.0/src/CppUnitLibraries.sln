@@ -1,0 +1,44 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cppunit", "cppunit\cppunit.vcproj", "{3F947359-F023-49EF-B609-06569FC24F56}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cppunit_dll", "cppunit\cppunit_dll.vcproj", "{DE135AB1-5218-4290-97BB-31671811C17B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug Crossplatform Setting = Debug Crossplatform Setting
+		Debug Unicode = Debug Unicode
+		Release = Release
+		Release Unicode = Release Unicode
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{3F947359-F023-49EF-B609-06569FC24F56}.Debug.ActiveCfg = Debug|Win32
+		{3F947359-F023-49EF-B609-06569FC24F56}.Debug.Build.0 = Debug|Win32
+		{3F947359-F023-49EF-B609-06569FC24F56}.Debug Crossplatform Setting.ActiveCfg = Debug Crossplatform Setting|Win32
+		{3F947359-F023-49EF-B609-06569FC24F56}.Debug Crossplatform Setting.Build.0 = Debug Crossplatform Setting|Win32
+		{3F947359-F023-49EF-B609-06569FC24F56}.Debug Unicode.ActiveCfg = Debug|Win32
+		{3F947359-F023-49EF-B609-06569FC24F56}.Debug Unicode.Build.0 = Debug|Win32
+		{3F947359-F023-49EF-B609-06569FC24F56}.Release.ActiveCfg = Release|Win32
+		{3F947359-F023-49EF-B609-06569FC24F56}.Release.Build.0 = Release|Win32
+		{3F947359-F023-49EF-B609-06569FC24F56}.Release Unicode.ActiveCfg = Release|Win32
+		{3F947359-F023-49EF-B609-06569FC24F56}.Release Unicode.Build.0 = Release|Win32
+		{DE135AB1-5218-4290-97BB-31671811C17B}.Debug.ActiveCfg = Debug|Win32
+		{DE135AB1-5218-4290-97BB-31671811C17B}.Debug.Build.0 = Debug|Win32
+		{DE135AB1-5218-4290-97BB-31671811C17B}.Debug Crossplatform Setting.ActiveCfg = Debug|Win32
+		{DE135AB1-5218-4290-97BB-31671811C17B}.Debug Crossplatform Setting.Build.0 = Debug|Win32
+		{DE135AB1-5218-4290-97BB-31671811C17B}.Debug Unicode.ActiveCfg = Debug|Win32
+		{DE135AB1-5218-4290-97BB-31671811C17B}.Debug Unicode.Build.0 = Debug|Win32
+		{DE135AB1-5218-4290-97BB-31671811C17B}.Release.ActiveCfg = Release|Win32
+		{DE135AB1-5218-4290-97BB-31671811C17B}.Release.Build.0 = Release|Win32
+		{DE135AB1-5218-4290-97BB-31671811C17B}.Release Unicode.ActiveCfg = Release|Win32
+		{DE135AB1-5218-4290-97BB-31671811C17B}.Release Unicode.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

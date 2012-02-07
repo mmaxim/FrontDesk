@@ -1,0 +1,14 @@
+*.class
+FiboTestSuite.zip
+Fibo.java
+*.zip
+JUnitDiscover.java
+jdisco.pl
+checksubj.xslt
+checks.xml
+CheckStyle.java
+subjresult.xsd
+HelloComponentTestSuite.java
+out.txt
+Runner.java
+comp

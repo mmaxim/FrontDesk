@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" targetNamespace="" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="3" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="ImageUrlCaption">
+    <value>Select Image</value>
+  </data>
+  <data name="ImageUrlFilter">
+    <value>Image Files (*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png)|*.gif;*.jpg;*.jpeg;*.bmp;*.wmf;*.png|All Files (*.*)|*.*</value>
+  </data>
+  <data name="MultiPageNoItems">
+    <value>To add PageViews to this MultiPage, please switch to HTML view.</value>
+  </data>
+  <data name="MultiPageShowNextPage">
+    <value>Show Next Page</value>
+  </data>
+  <data name="MultiPageShowPrevPage">
+    <value>Show Previous Page</value>
+  </data>
+  <data name="TabStripAddSep">
+    <value>Add Separator</value>
+  </data>
+  <data name="TabStripAddTab">
+    <value>Add Tab</value>
+  </data>
+  <data name="TabStripNoItems">
+    <value>Please add TabStrip items through the Items property in the Property pane.</value>
+  </data>
+  <data name="ToolbarAddButton">
+    <value>Add Button</value>
+  </data>
+  <data name="ToolbarNoItems">
+    <value>Please add Toolbar items through the Items property in the Property pane.</value>
+  </data>
+  <data name="TreePlaceHolder">
+    <value>Add nodes through the Nodes property in the Property pane.</value>
+  </data>
+  <data name="UrlCaption">
+    <value>Select URL</value>
+  </data>
+  <data name="UrlFilter">
+    <value>All Files (*.*)|*.*</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

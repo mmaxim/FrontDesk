@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<ExportData>
+  <Export>
+    <Mod>632442533413500000</Mod>
+    <ID>80925</ID>
+  </Export>
+  <File>
+    <type>file</type>
+    <path>TextGenerator.java</path>
+  </File>
+  <File>
+    <type>file</type>
+    <path>Trie.java</path>
+  </File>
+</ExportData>

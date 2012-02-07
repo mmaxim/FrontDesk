@@ -1,0 +1,178 @@
+reader is reading
+reader close successfuly
+1 http://www.andrew.cmu.edu/user/dim/E-2.html
+size ofQ is 1
+size of Graph is 1 http://www.andrew.cmu.edu/user/dim/E-1.html
+reader is reading
+reader close successfuly
+2 http://www.andrew.cmu.edu/user/dim/E-3.html
+size ofQ is 1
+size of Graph is 2 http://www.andrew.cmu.edu/user/dim/E-2.html
+reader is reading
+reader close successfuly
+3 http://www.andrew.cmu.edu/user/dim/E-4.html
+size ofQ is 1
+size of Graph is 3 http://www.andrew.cmu.edu/user/dim/E-3.html
+reader is reading
+reader close successfuly
+4 http://www.andrew.cmu.edu/user/dim/E-5.html
+size ofQ is 1
+size of Graph is 4 http://www.andrew.cmu.edu/user/dim/E-4.html
+reader is reading
+reader close successfuly
+4 http://www.andrew.cmu.edu/user/dim/E-1.html
+size ofQ is 0
+size of Graph is 5 http://www.andrew.cmu.edu/user/dim/E-5.html
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+Webpage (http://www.andrew.cmu.edu/user/dim/E-1.html) contains :
+Word 0 is e Freq is : 1
+Word 0 is one Freq is : 1
+Word 0 is web Freq is : 1
+Parent Link 0 is http://www.andrew.cmu.edu/user/dim/E-5.html
+Webpage (http://www.andrew.cmu.edu/user/dim/E-2.html) contains :
+Word 1 is e Freq is : 1
+Word 1 is two Freq is : 1
+Word 1 is web Freq is : 2
+Parent Link 1 is http://www.andrew.cmu.edu/user/dim/E-1.html
+Webpage (http://www.andrew.cmu.edu/user/dim/E-3.html) contains :
+Word 2 is e Freq is : 1
+Word 2 is three Freq is : 1
+Word 2 is web Freq is : 3
+Parent Link 2 is http://www.andrew.cmu.edu/user/dim/E-2.html
+Webpage (http://www.andrew.cmu.edu/user/dim/E-4.html) contains :
+Word 3 is e Freq is : 1
+Word 3 is four Freq is : 1
+Word 3 is web Freq is : 4
+Parent Link 3 is http://www.andrew.cmu.edu/user/dim/E-3.html
+Webpage (http://www.andrew.cmu.edu/user/dim/E-5.html) contains :
+Word 4 is e Freq is : 1
+Word 4 is five Freq is : 1
+Word 4 is web Freq is : 5
+Parent Link 4 is http://www.andrew.cmu.edu/user/dim/E-4.html
+
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+
+keyword 1 : web Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 2 : one Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 3 : two Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 4 : five Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 5 : four Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 6 : three Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 7 : e Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+reader is reading
+reader close successfuly
+1 http://www.andrew.cmu.edu/user/dim/E-2.html
+size ofQ is 1
+size of Graph is 1 http://www.andrew.cmu.edu/user/dim/E-1.html
+reader is reading
+reader close successfuly
+2 http://www.andrew.cmu.edu/user/dim/E-3.html
+size ofQ is 1
+size of Graph is 2 http://www.andrew.cmu.edu/user/dim/E-2.html
+reader is reading
+reader close successfuly
+3 http://www.andrew.cmu.edu/user/dim/E-4.html
+size ofQ is 1
+size of Graph is 3 http://www.andrew.cmu.edu/user/dim/E-3.html
+reader is reading
+reader close successfuly
+4 http://www.andrew.cmu.edu/user/dim/E-5.html
+size ofQ is 1
+size of Graph is 4 http://www.andrew.cmu.edu/user/dim/E-4.html
+reader is reading
+reader close successfuly
+4 http://www.andrew.cmu.edu/user/dim/E-1.html
+size ofQ is 0
+size of Graph is 5 http://www.andrew.cmu.edu/user/dim/E-5.html
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+Webpage (http://www.andrew.cmu.edu/user/dim/E-1.html) contains :
+Word 0 is e Freq is : 1
+Word 0 is one Freq is : 1
+Word 0 is web Freq is : 1
+Parent Link 0 is http://www.andrew.cmu.edu/user/dim/E-5.html
+Webpage (http://www.andrew.cmu.edu/user/dim/E-2.html) contains :
+Word 1 is e Freq is : 1
+Word 1 is two Freq is : 1
+Word 1 is web Freq is : 2
+Parent Link 1 is http://www.andrew.cmu.edu/user/dim/E-1.html
+Webpage (http://www.andrew.cmu.edu/user/dim/E-3.html) contains :
+Word 2 is e Freq is : 1
+Word 2 is three Freq is : 1
+Word 2 is web Freq is : 3
+Parent Link 2 is http://www.andrew.cmu.edu/user/dim/E-2.html
+Webpage (http://www.andrew.cmu.edu/user/dim/E-4.html) contains :
+Word 3 is e Freq is : 1
+Word 3 is four Freq is : 1
+Word 3 is web Freq is : 4
+Parent Link 3 is http://www.andrew.cmu.edu/user/dim/E-3.html
+Webpage (http://www.andrew.cmu.edu/user/dim/E-5.html) contains :
+Word 4 is e Freq is : 1
+Word 4 is five Freq is : 1
+Word 4 is web Freq is : 5
+Parent Link 4 is http://www.andrew.cmu.edu/user/dim/E-4.html
+
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+parent node 1
+parent node 1
+child node 1
+
+keyword 1 : web Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 2 : one Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 3 : two Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 4 : five Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 5 : four Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 6 : three Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5
+keyword 7 : e Weblink : http://www.andrew.cmu.edu/user/dim/E-5.html indeg : 1 Freg : 5

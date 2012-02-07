@@ -1,0 +1,13 @@
+package junit.frontdesk;
+
+import java.io.PrintStream;
+
+import junit.framework.*;
+import junit.runner.*;
+
+public class FrontDeskTestResult extends TestResult {
+
+    public FrontDeskTestResult() { super(); }
+
+    
+}

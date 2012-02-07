@@ -1,0 +1,156 @@
+<HTML>
+
+<font size="5" color="#ff0000"><b>Architecture</b></font><hr>
+<br>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">High Level</FONT></b>
+<br>
+<p>The system's architecture is divided into two parts: the Testing Center, and the Web Interface. Each part shares much functionality, but for the most part they are two different architectural entities. Everything in the architecture is kept as abstract as possible, with emphasis on keeping any OS specific activity abstracted. The Testing Center implements all the testing functionality (including the Handin Test SDK). The Web Interface provides the Directory Viewer, Grading Support, and Submission Support. Below is a sketch of how each system operates and is layed out.</p>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Common Components</FONT></b>
+<br>
+<ul>
+<li>Configuration Manager</li>
+<ul>
+<li>Paths</li>
+<li>Testing Centers</li>
+<li>Database Server</li>
+</ul>
+<li>Utilities Access: Each utility will be treated as a class in the system utilizing classes in the OS and Language Layers for flexibility</li>
+<ul>
+<li>GNU Make</li>
+<li>CVS</li>
+<li>Perl</li>
+<li>Pluggable Utility support (?)</li>
+</ul>
+</ul>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">OS and Language Layers</FONT></b>
+<br>
+<ul>
+<li><b>Language Layers</b></li>
+<ul>
+<li>Language Implementation (e.g. J2SE, SML, OCaml, libc)</li>
+<li>Client-Side Test Program Creation</li>
+</ul>
+<li><b>OS Layers</b></li>
+<ul>
+<li>Directory Structure</li>
+<li>Abstract OS specific features</li>
+<ul>
+<li>Manipulate Files</li>
+<li>Create/Remove Directories</li>
+<li>OS-Level File Permissions</li>
+<li>OS-Level User Management</li>
+<li>Executing (and killing) Programs</li>
+<li>Reading stream data</li>
+</ul>
+</ul>
+</ul>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Data Access and Storage</FONT></b>
+<br>
+<ul>
+<li>Utilize data layer provided by either J2EE or .NET platforms (ADO.NET or EJB)</li>
+<li>All stored data access happens through data objects (EJB or ADO.NET objects)</li>
+<li>Database layout essentially the same as in old handin</li>
+<ul>
+<li>Users</li>
+<li>Groups</li>
+<li>Classes</li>
+<li>Assignments</li>
+<li>Tests</li>
+<li>Submissions</li>
+<li>Results</li>
+</ul>
+<li>All user, assignment, test, submission, and result records stored in the database on the web server</li>
+</ul>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Authentication and Multiple Courses</FONT></b>
+<br>
+<ul>
+<li>Provide a flexible authentication model, allowing support for native handin accounts, and pluggable support for other types of authentication (WebISO, Passport, etc). Hook into remote user databases?</li>
+<li>Every table in the database will have a field signifying which course it belongs to. This will allow the system to be expanded to handle more than one class.</li>
+</ul>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Testing Architecture</FONT></b>
+<br>
+<ul>
+<li><b>Testing Centers</b></li>
+<ul>
+<li>Able to be run on any machine</li>
+<li>Main server transmits any base data to the testing center before assigning it any jobs</li>
+<li>Main server then transmits code to be tested along with how to perform test in XML document</li>
+<li>Testing Center then utilizes the OS and Language Layers to perform the <b>Build</b>, and then <b>Run</b> stage.</li>
+<li>Test Programs <b>will not user any OS specific features</b>. This includes pipes, redirects, etc.. A test program should <b>hook into the user code</b> and perform tests as if it were a client of said code.</li>
+<li>There wille exist a <b>Handin Test SDK</b> for <b>Java</b> and <b>C#</b> that will include useful classes to aid in the creation of test programs.</li>
+<ul>
+<li>Comparing Files</li>
+<li>Reading Streams</li>
+<li>Timing</li>
+<li>String Comparison</li>
+</ul>
+<li><b>Building</b></li>
+<ul>
+<li>Use the GNU Makefile class from the Common Components to perform the build.</li>
+<li>If make is not being used, then a Perl script can be enterred as the build mechanism</li>
+<li>These are <b>the only two options</b> for building. Under no circumstances will any OS specific functionality be incorporated into the build phase (e.g javac *.java).</li>
+<li>If one wants to extend this capability, they will need to add-in a handin plugin to accomodate it, there will be <b>no ad hoc command line build schemes</b>
+</ul>
+<li><b>Running</b> 
+<ul>
+<li>The run stage will always take place in a <b>sandbox</b> directory on the Testing Center server. The Testing Center can establish a <b>testing</b> user and confine this user to the sandbox directory. The OS Layer will allow the Testing Center to then assume the identity of the <b>testing</b> user and therefore confine the testing program to the sandbox directory.
+<li>Testing programs must output XML that the Testing Center can handle in this form</li>
+<ul>
+<li>Output (can be anything, as long as it is relevant for the test)</li>
+<li>Score (the most important feature)</li>
+<li>Time (running time of the test, can be zero if not timed)</li>
+<li>Additional Information (if anything else)</li>
+</ul>
+</ul>
+<li>The Testing Center will have the ability through the OS Layer to terminate a testing program if it appears to be in an infinite loop</li>
+</ul>
+</ul>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Feedback and Directory Viewer</FONT></b>
+<br>
+<ul>
+<li>The <b>Directory Viewer</b> will present the user a Windows Explorer style view of the internal handin directory structure</li>
+<li>The OS Layer will provide the necessary functionality to accomplish listing, reading, writing, and manipulating files</li>
+<li>Users of the system can then browse the directories they have permissions</li>
+<li><b>Permissions</b></li>
+<ul>
+<li>Every directory in the system will have certain permission <b>metadata</b> associated with it. This metadata will describe the permissions of the directory and the files in the directory.</li>
+<li>Each piece of metadata will describe the permissions interms of three groups: <b>Students, TAs, Instructors</b></li>
+<li>In addition to this, certain individual users can also be granted rights to resources.</li>
+<li>For instance, a student makes a submission and his directory is tagged as being closed to all students, open to all TAs, and a single permission is granted to the user who made the submission</li>
+</ul>
+<li>TAs and Instructors can edit any file within the system root and apply <b>handin feedback tags</b> to each code file</li>
+<li><b>Handin Feedback Tags</b></li>
+<ul>
+<li>Will be highlighted by the <b>Directory Viewer</b> interface for students to view.</li>
+<li>Can also be harvested for students to collect all the tags without having to scroll through all of their code</li>
+<li>Tags will include any deductions as well as any comments. The deductions can be summed up and inserted into the subjective score for the students assignment grade</li>
+</ul>
+<li>The <b>Directory Viewer</b> will also allow students to attempt to build their submissions in order to assess why errors are occurring.</li>
+<li>TAs can access the <b>Directory Viewer</b> to make small changes to student code in order to make it compile or work correctly with the system</li> 
+</ul>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Submission and CVS Interaction</FONT></b>
+<br>
+<ul>
+<li>The student end of the system will incorporate most of the functionality of the admin side, minus the ability to do testing and view results and code.</li>
+<li>Multiple submissions will be kept within the student directory and each submission will logged in the database</li>
+<li><b>Archive Submission</b></li>
+<ul>
+<li>Students will select their archive from their own computers and transmit the file to the Web server.</li>
+<li>The archive is then unpacked (if this fail the user is notified), and the submission is logged</li>
+<li>The user can then confirm this submission by enterring into the <b>Directory Viewer</b> interface and examining the new handin directory</li>
+<li>Permission metadata is also deposited into the directory, although this information is not viewable from the Web interface to the system</li>
+</ul>
+<li><b>CVS Submission</b></li>
+<ul>
+<li>The system can utilize the CVS component provided by the <b>Common Components</b> to interact with CVS in order to create the student submission</li>
+<li>The code is checked out from CVS (which can be on the Web Server or not) and recorded as a submission in the same manner as an archive submission is</li>
+</ul>
+</ul>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Result Interaction</FONT></b>
+<br>
+<ul>
+<li>Provide access to the automated test result in many different formats: section wide, single user. In addition, provide many different types of formats: PostScript, text.</li>
+<li>Component to allow a user to print an entire sections code/results on separate paper.</li>
+<li>Subjective scores will be handled through the <b>Directory Viewer</b> system. The subjective score will be first tallied by the <b>handin tags</b> throughout the user's code, and then the TA can modify this according to other factors not present in the tags. Extra Credit can be handled in the same way using the same <b>tag system</b>.</li>
+</ul>
+</HTML>

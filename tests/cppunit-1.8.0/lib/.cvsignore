@@ -1,0 +1,7 @@
+cppunit_dll.lib
+testrunner.dll
+testrunner.exp
+testrunner.lib
+cppunit.lib
+cppunit_dll.dll
+cppunit_dll.exp

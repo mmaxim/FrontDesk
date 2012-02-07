@@ -1,0 +1,84 @@
+<HTML>
+
+<font size="5" color="#ff0000"><b>Enhancements</b></font><hr>
+<br>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Stability</FONT></b>
+<ul>
+<li>The system must be absolutely secure and stable. It is not an option to go down for any extended period of time, or be possible to compromise te integrity of the system.</li>
+<li>The system must improve its robustness. There should be no point in which the integrity of the system is put into question as a result of invalid input percolating to the database level</li>
+</ul>
+
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Student Interface</FONT></b>
+<ul>
+<li>Modes of Submission</li>
+<ul>
+<li><b>Archive Based</b> - Student creates a ZIP, JAR, TAR, etc. file and sends this code to the system for processing.</li>
+<li><b>CVS Based</b> - Student maintains CVS module on the handin server. Upon completion of the assignment, the student can choose to submit final work from handin CVS module instead of creating an archive.</li>
+</ul>
+<li>Modes of Evaluation</li>
+<ul>
+<li>Students will then be told they will receive an <b>email</b> indicating pre-test and compile correctness. This will allow the server to amortize the cost of doing these pre-tests instead of trying to run them all at once to give the student instant feedback</li>
+<li>TAs can also enable the instant feedback on the Web page if they want.</li>
+</ul>
+<li>More detailed information about handin difficulties (such as compile problems) available to students. A student should be able to access the <b>Directory Viewer</b> interface to attempt to compile code and to get more information about why their submission failed.</li>
+</ul><br>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#ff0000">Testing Interface</FONT></b>
+<ul>
+<li><b>Server Side Testing</b></li>
+<ul>
+<li>Testing Centers run the run the server side testing software</li>
+<li>Potentially many testing centers available to the handin server. Main testing center will delegate certain tests to any free testing center.
+<li>Data can be either in a shared disk space, or if this is impossibly, can be transmitted to the remote centers. </li>
+<li>Increased amount of status information on jobs. More robust ability to kill jobs and to even get a snapshot of what exactly is happenning</li>
+<li>JUnit</li>
+<li><b>Tests</b></li>
+<ul>
+<li>Sandboxed test area on the server for greater security</li>
+<li>All tests will conform to testing interface. <b>Scores for tests will *not* be determined by the system, instead the test program submitted will generate the score</b></li>
+<li>Test progroms will follow a well defined specification, most likely communicating with testing server through XML based communication</li>
+<li>The system will provide the means for sandboxing, running against multiple students, etc, while the test program is <b>entirely responsible</b> for assigning the scores</li>
+</ul>
+</ul>
+<li><b>Testabililty</b></li>
+<ul>
+<li>Input/Output Guidelines for student code</li>
+<li>Logging guidelines (vs. System.out.println). </li>
+<li>211 Standard Library (user I/O, logging, file I/O, GUI (?))</li>
+</ul>
+<li><b>Client Side Testing</b></li>
+<ul>
+<li>Leverage the power of the testing center to provide students with a means to self-grade their own submissions. Provides more feedback and also provide </li><li>Client side testig architecture can provide a semi-secure way of distributing testing across the students. Spot check testing can be used to make sure no one is abusing the system.</li>
+</ul>
+<li>Abstractions between test programming language and underlying testing operating system. </li>
+<ul>
+<li>Such abstraction will allow high level components to do testing related activities without restricting the system to a particular programming language or operating system.</li>
+<li>Feasability assesment for a specific other language (to be selected (C++?))</li>
+</ul>
+</ul>
+<br>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Grading Interface</FONT></b>
+<ul>
+<li><B>Directory Viewer</B></li>
+<ul>
+<li>WebDAV</li>
+<li>Addresses problem of only server admins being able to modify handin internal directory structure</li>
+<li>"Windows Explorer" type access to the students submission directory</li>
+<li>Ability to edit code, change directory structure, attempt to build, etc.</li>
+</ul>
+<li>More result viewing options. Summary views, entire section views, entire section prinout ability</li>
+<li>Modify objective test scores, add in a subjective test score and extra credit points that are included in the students results for that assignment.</li>
+<li>Diff the user and correct output to zero in on differences in complex output (CVS Diff)</li>
+<li>Code markup can be annotated with "handin markup tags"</li>
+<ul>
+<li>Specifically comments from TA, so that it is highlited or decorated in some way so that when a student views their code, they can easily see TA comments. These tags would be applied int he <b>Directory Viewer</b> module.</li>
+<li>Comments/Tags can be summarized for students and TAs to view quickly</li>
+</ul>
+</ul>
+<br>
+<b><FONT FACE="ARIAL" SIZE="4" COLOR="#FF0000">Admin Interface</FONT></b>
+<ul>
+<li>More control over your section. Geared toward section management (particulary your own section). Send email, view entire section grades, view grading/submission information (summary), etc.</li>
+<li>TAs should be presented with a section oriented view upon logging into the system</li>
+<li>Backups and undo capability (see Plone)</li>
+</ul>
+</HTML>

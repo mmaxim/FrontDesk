@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://FrontDesk/WebServices" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://FrontDesk/WebServices" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://FrontDesk/WebServices">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetCourses">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoursesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCoursesResult" type="s0:ArrayOfCourse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCourse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Course" nillable="true" type="s0:Course" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Course">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:DataComponent">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ContentID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DataComponent" abstract="true" />
+      <s:element name="ServiceTicket" type="s0:ServiceTicket" />
+      <s:complexType name="ServiceTicket">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Ident" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="HostAddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGroups">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="asstID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupsResult" type="s0:ArrayOfGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGroup">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Group" nillable="true" type="s0:Group" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Group">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Principal">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="AsstID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Creator" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Creation" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Principal">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:DataComponent">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrincipalID" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfoResult" type="s0:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="User">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Principal">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastLogin" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="Admin" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="Authenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AuthenticateResult" type="s0:ServiceTicket" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logout">
+        <s:complexType />
+      </s:element>
+      <s:element name="LogoutResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </types>
+  <message name="GetCoursesSoapIn">
+    <part name="parameters" element="s0:GetCourses" />
+  </message>
+  <message name="GetCoursesSoapOut">
+    <part name="parameters" element="s0:GetCoursesResponse" />
+  </message>
+  <message name="GetCoursesServiceTicket">
+    <part name="ServiceTicket" element="s0:ServiceTicket" />
+  </message>
+  <message name="GetGroupsSoapIn">
+    <part name="parameters" element="s0:GetGroups" />
+  </message>
+  <message name="GetGroupsSoapOut">
+    <part name="parameters" element="s0:GetGroupsResponse" />
+  </message>
+  <message name="GetGroupsServiceTicket">
+    <part name="ServiceTicket" element="s0:ServiceTicket" />
+  </message>
+  <message name="GetInfoSoapIn">
+    <part name="parameters" element="s0:GetInfo" />
+  </message>
+  <message name="GetInfoSoapOut">
+    <part name="parameters" element="s0:GetInfoResponse" />
+  </message>
+  <message name="GetInfoServiceTicket">
+    <part name="ServiceTicket" element="s0:ServiceTicket" />
+  </message>
+  <message name="AuthenticateSoapIn">
+    <part name="parameters" element="s0:Authenticate" />
+  </message>
+  <message name="AuthenticateSoapOut">
+    <part name="parameters" element="s0:AuthenticateResponse" />
+  </message>
+  <message name="LogoutSoapIn">
+    <part name="parameters" element="s0:Logout" />
+  </message>
+  <message name="LogoutSoapOut">
+    <part name="parameters" element="s0:LogoutResponse" />
+  </message>
+  <message name="LogoutServiceTicket">
+    <part name="ServiceTicket" element="s0:ServiceTicket" />
+  </message>
+  <portType name="UserDataServiceSoap">
+    <operation name="GetCourses">
+      <input message="s0:GetCoursesSoapIn" />
+      <output message="s0:GetCoursesSoapOut" />
+    </operation>
+    <operation name="GetGroups">
+      <input message="s0:GetGroupsSoapIn" />
+      <output message="s0:GetGroupsSoapOut" />
+    </operation>
+    <operation name="GetInfo">
+      <input message="s0:GetInfoSoapIn" />
+      <output message="s0:GetInfoSoapOut" />
+    </operation>
+    <operation name="Authenticate">
+      <input message="s0:AuthenticateSoapIn" />
+      <output message="s0:AuthenticateSoapOut" />
+    </operation>
+    <operation name="Logout">
+      <input message="s0:LogoutSoapIn" />
+      <output message="s0:LogoutSoapOut" />
+    </operation>
+  </portType>
+  <binding name="UserDataServiceSoap" type="s0:UserDataServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="GetCourses">
+      <soap:operation soapAction="http://FrontDesk/WebServices/GetCourses" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:GetCoursesServiceTicket" part="ServiceTicket" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetGroups">
+      <soap:operation soapAction="http://FrontDesk/WebServices/GetGroups" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:GetGroupsServiceTicket" part="ServiceTicket" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetInfo">
+      <soap:operation soapAction="http://FrontDesk/WebServices/GetInfo" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:GetInfoServiceTicket" part="ServiceTicket" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Authenticate">
+      <soap:operation soapAction="http://FrontDesk/WebServices/Authenticate" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Logout">
+      <soap:operation soapAction="http://FrontDesk/WebServices/Logout" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="s0:LogoutServiceTicket" part="ServiceTicket" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UserDataService">
+    <port name="UserDataServiceSoap" binding="s0:UserDataServiceSoap">
+      <soap:address location="http://localhost/FrontDeskServices/userdatasvc.asmx" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,96 @@
+<HTML>
+
+<font size="5" color="#ff0000"><b>Subjective Grading Architecture</b></font><hr>
+<br>
+
+<b>Problem:</b> Subjective grading currently involves printing out large
+code documents and writing in manually comments about the programs
+subjective quality. This is clearly a waste of paper and time. Furthermore,
+TAs rarely provide any sort of structure to these comments; i.e. there is
+no hierarchy of concerns to be addressed and easily referenced by students;
+it is all ad hoc.<br><br>
+
+<b>Solution:</b> Provide a means through FrontDesk to create a
+hierarchicial representation of subjective grading criteria along with FML
+tags to annotate the code itself. This allows general comments to be made
+in terms of the criteria and comments to be inserted in a structured way,
+all the while maintaining a Web view and reducing time and paper. <br><br>
+
+In order to solve this problem, we associate every <b>Assignment</b> with
+an XML file describing the hierarchy of subjective criteria. When the TA
+starts the subjective grading page, they are presented with a tree view of
+this document and text boxes to fill in how the student submission fulfils
+these criteria. Here is an example document:<br>
+
+<pre>
+
+&#60;criteria>
+    &#60;Modularity>
+        &#60;add desc="Broke down algorithms into component functions" points=10 />
+	&#60;add desc="Designed an effective class hierachy" points=10/>
+    &#60;/Modularity>
+
+    &#60;Comments>
+        &#60;add desc="Judicious use of comments" points=5 />
+    &#60;/Comments>
+&#60;/criteria>
+	
+</pre>
+
+Such a document can be both designed and viewed through a tree view control
+on the Web page. In other words, a TA does not need to know about XML in
+order to create this hierarchy, all XML is take care of through the tree
+view provided by FrontDesk.<br><br>
+
+Once presented with this tree view, a TA will then proceed to fill in
+comments and points associated with each component of the criteria. Such
+comments and points are stored in the <b>Results</b> table in the
+database. How is it stored? Using XML again. Example:
+
+<pre>
+public class TreeView : IWebControl {
+
+    public void AssociateDataWithNode(TreeNode c, String data) {
+        //Associate the String data (TA comment) with a TreeNode
+    }
+
+    public XMLDocument ToXML() {
+       //Create a new XML document of the criteria will user comments
+    }
+}
+</pre>
+
+The resultant XML document will look like this:
+
+<pre>
+&#60;criteria>
+    &#60;Modularity>
+        &#60;add desc="Broke down algorithms into component functions"
+	points=10 assigned=6 comment="Too much code in main!" />
+	&#60;add desc="Designed an effective class hierachy" points=10
+	assigned=10 comment="Great job!"/>
+    &#60;/Modularity>
+
+    &#60;Comments>
+        &#60;add desc="Judicious use of comments" points=5 assigned=0
+        comment="No comments!" />
+    &#60;/Comments>
+&#60;/criteria>
+&#60;/pre>
+
+This document will be stored in the <b>Results</b> database table and will
+of course be access through the proverbial IFrontDeskDataProvider.<br>
+
+<pre>
+public interface IFrontDeskDataProvider {
+
+    public XMLDocument GetSubjectiveResult(Submission s);
+
+}
+</pre>
+
+Alongside FrontDesk FML markup for structured in code comments, this
+provides an effective means for a Web centered subjective feedback system
+not necessarily limited to programming assignments. 
+
+</HTML>

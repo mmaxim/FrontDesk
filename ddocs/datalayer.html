@@ -1,0 +1,95 @@
+<HTML>
+
+<font size="5" color="#ff0000"><b>Data Layer Architecture</b></font><hr>
+<br>
+
+The main data access component in FrontDesk is the IFrontDeskDataProvider
+interface. Such an interface allows for implementing classes to use
+database engine specific techniques in order to make implementation as
+efficient as possible, while maintaing the flexibility of supporting
+multiple engines.
+
+<br><br>
+
+<pre>
+public interface IFrontDeskDataProvider {
+
+     public bool ValidateUser(String user, String password);
+     public UserCollection GetGroup(String groupname);
+     public UserCollection GetLateSubmitters(int assignment);
+
+     // And more!
+     ...
+
+}
+</pre>
+
+<br>
+
+In order to make this useful, we implement the interface.
+
+<pre>
+//SQL Server FrontDeskDataProvider implementation
+public class SqlFrontDeskDataProvider : IFrontDeskDataProvider {
+
+    public bool ValidateUser(String user, String password) {
+        // Invoke SQL Server stored procedure
+    }
+
+}
+
+//Generic SQL engine FrontDeskDataProvider implementation
+public class GenericFrontDeskDataProvider : IFrontDeskDataProvider {
+
+    public bool ValidateUser(String user, String password) {
+    
+        //Roll through a bunch of SQL to validate
+    }
+}
+</pre>
+<br>
+
+All data elements will be represented as "components". For instance, a User
+component could look like:
+
+<pre>
+public class User : IComponent {
+
+    public String UserName;
+    public int type;
+
+    //And more!
+}
+</pre>
+
+<br>
+
+A key point about this is that there is no database code in this
+component. The responsibility of converting a database record into a User
+component object is the role of the data provider, not the component
+itself.<br><br>
+
+The particular technique described here entails that a program wishing to
+use these components know nothing about where the data comes from. It need
+not even be stored in a database, it could be in XML files or some other
+medium. All that is needed for the FrontDesk application as a whole is an
+implementation of the functionality in IFrontDeskDataProvider in order to
+be able to access those interface functions to manipulate a backing store
+it doesn't care about.<br><br>
+
+<b>Advantages</b>: 
+<ul>
+<li>Provides a data source independent medium for FrontDesk to manipulate
+data</li>
+<li>Retains SQL engine flexibility while maintaining performance</li>
+<li>Pluggable support through reflection and configuration</li>
+</ul>
+
+<b>Disadvantages</b>:
+<ul>
+<li>FrontDesk data interaction limited by what is provided in
+IFrontDeskDataProvider</li>
+<li>Someone needs to create these providers</li>
+</ul>
+
+</HTML>

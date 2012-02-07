@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" targetNamespace="" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="3" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <data name="AutoPostBack">
+    <value>Causes an automatic postback when there is a change in state.</value>
+  </data>
+  <data name="BaseAccessKey">
+    <value>Keyboard shortcut used by the control.</value>
+  </data>
+  <data name="BaseEnabled">
+    <value>Enabled state of the control.</value>
+  </data>
+  <data name="BaseID">
+    <value>Programmatic name of the control.</value>
+  </data>
+  <data name="BaseTabIndex">
+    <value>The tab order of the control.</value>
+  </data>
+  <data name="BaseToolTip">
+    <value>The tooltip displayed when the mouse is over the control.</value>
+  </data>
+  <data name="CheckButtonSelected">
+    <value>Selected state of the CheckButton.</value>
+  </data>
+  <data name="CheckGroupForceSelection">
+    <value>Ensures that at least one CheckButton is selected within the group.</value>
+  </data>
+  <data name="CheckGroupItems">
+    <value>The collection of items in the CheckGroup.</value>
+  </data>
+  <data name="ChildDefaultStyle">
+    <value>Style to be applied when in the default state.</value>
+  </data>
+  <data name="ChildHoverStyle">
+    <value>Style to be applied when in the hover state.</value>
+  </data>
+  <data name="ChildSelectedStyle">
+    <value>Style to be applied when in the selected state.</value>
+  </data>
+  <data name="DefaultImageUrl">
+    <value>ImageUrl to be applied when in the default state.</value>
+  </data>
+  <data name="DropDownDataMember">
+    <value>The table used for binding when a DataSet is used as a data source.</value>
+  </data>
+  <data name="DropDownDataTextField">
+    <value>The field in the datasource which provides the item text.</value>
+  </data>
+  <data name="DropDownDataTextFormatString">
+    <value>The formatting applied to the text field.</value>
+  </data>
+  <data name="DropDownDataValueField">
+    <value>The field in the datasource which provides the item value.</value>
+  </data>
+  <data name="DropDownItems">
+    <value>The collection of items in the list.</value>
+  </data>
+  <data name="HoverImageUrl">
+    <value>ImageUrl to be applied when in the hover state.</value>
+  </data>
+  <data name="InnerControlBackColor">
+    <value>Color of the background of the control.</value>
+  </data>
+  <data name="InnerControlBorderColor">
+    <value>Color of the border around the control.</value>
+  </data>
+  <data name="InnerControlBorderStyle">
+    <value>Style of the border around the control.</value>
+  </data>
+  <data name="InnerControlBorderWidth">
+    <value>Width of the border around the control.</value>
+  </data>
+  <data name="InnerControlCssClass">
+    <value>CSS Class name applied to the control.</value>
+  </data>
+  <data name="InnerControlFont">
+    <value>The font used for text within the control.</value>
+  </data>
+  <data name="InnerControlForeColor">
+    <value>Color of the text within the control.</value>
+  </data>
+  <data name="InnerControlHeight">
+    <value>The height of the control.</value>
+  </data>
+  <data name="InnerControlStyle">
+    <value>Style applied to the enclosed control.</value>
+  </data>
+  <data name="InnerControlWidth">
+    <value>The width of the control.</value>
+  </data>
+  <data name="InvalidChildTagName">
+    <value>Invalid child with tagname "{0}"</value>
+  </data>
+  <data name="InvalidChildType">
+    <value>Invalid child of type "{0}". Only children of type "{1}" are allowed.</value>
+  </data>
+  <data name="InvalidLiteralString">
+    <value>The literal string "{0}" was found. Literal strings are not allowed within this control.</value>
+  </data>
+  <data name="InvalidParentTagName">
+    <value>{0} must be a child of one of the following: {1}</value>
+  </data>
+  <data name="ItemImageUrl">
+    <value>ImageUrl to display in the item.</value>
+  </data>
+  <data name="ItemText">
+    <value>Text to display in the item.</value>
+  </data>
+  <data name="MultiPageErrorVisible">
+    <value>Cannot set Visible property on PageView since it is handled by the MultiPage.</value>
+  </data>
+  <data name="MultiPageSelectedIndex">
+    <value>Index of the initially selected page.</value>
+  </data>
+  <data name="NodeData">
+    <value>Custom data on the node.</value>
+  </data>
+  <data name="ParentDefaultStyle">
+    <value>Style that is applied to content that is in the default state.</value>
+  </data>
+  <data name="ParentHoverStyle">
+    <value>Style that is applied to content that is in the hovered state.</value>
+  </data>
+  <data name="ParentSelectedStyle">
+    <value>Style that is applied to content that is in the selected state.</value>
+  </data>
+  <data name="SelectedImageUrl">
+    <value>ImageUrl to be applied when in the selected state.</value>
+  </data>
+  <data name="SepDefaultImageUrl">
+    <value>ImageUrl to be applied to separators that are in the default state.</value>
+  </data>
+  <data name="SepDefaultStyle">
+    <value>Style to be applied to separators that are in the default state.</value>
+  </data>
+  <data name="SepHoverImageUrl">
+    <value>ImageUrl to be applied to separators in the hovered state.</value>
+  </data>
+  <data name="SepHoverStyle">
+    <value>Style to be applied to separators in the hovered state.</value>
+  </data>
+  <data name="SepSelectedImageUrl">
+    <value>ImageUrl to be applied to separators in the selected state.</value>
+  </data>
+  <data name="SepSelectedStyle">
+    <value>Style to be applied to separators in the selected state.</value>
+  </data>
+  <data name="TabDefaultStyle">
+    <value>Style to be applied to tabs in the default state.</value>
+  </data>
+  <data name="TabHoverStyle">
+    <value>Style to be applied to tabs in the hovered state.</value>
+  </data>
+  <data name="TabInvalidTargetID">
+    <value>TargetID does not point to a valid PageView</value>
+  </data>
+  <data name="TabSelectedStyle">
+    <value>Style to be applied to tabs in the selected state.</value>
+  </data>
+  <data name="TabStripInvalidTargetID">
+    <value>TargetID does not point to a valid MultiPage</value>
+  </data>
+  <data name="TabStripItems">
+    <value>Contents of the tabstrip.</value>
+  </data>
+  <data name="TabStripOrientation">
+    <value>Direction that the tabstrip is rendered.</value>
+  </data>
+  <data name="TabStripSelectedIndex">
+    <value>Index of the initially selected tab.</value>
+  </data>
+  <data name="TabStripSelectedIndexChange">
+    <value>Fires when the SelectedIndex property changes.</value>
+  </data>
+  <data name="TabStripTargetID">
+    <value>ID of the MultiPage that the TabStrip is targetting.</value>
+  </data>
+  <data name="TabTargetID">
+    <value>ID of the PageView that the tab is targetting.</value>
+  </data>
+  <data name="TextBoxColumns">
+    <value>The width of the textbox in characters.</value>
+  </data>
+  <data name="TextBoxMaxLength">
+    <value>The maximum number of characters that can be entered.</value>
+  </data>
+  <data name="TextBoxReadOnly">
+    <value>Whether the text in the control can be changed or not.</value>
+  </data>
+  <data name="TextBoxText">
+    <value>The text value.</value>
+  </data>
+  <data name="TextBoxTextMode">
+    <value>The behavior mode of the textbox.</value>
+  </data>
+  <data name="ToolbarButtonClick">
+    <value>Fires when a button in the toolbar is clicked.</value>
+  </data>
+  <data name="ToolbarButtonClickChild">
+    <value>Fires when the button is clicked.</value>
+  </data>
+  <data name="ToolbarButtonClickGroup">
+    <value>Fires when a button in the group is clicked.</value>
+  </data>
+  <data name="ToolbarCheckChange">
+    <value>Fires when a checkbutton in the toolbar changes state.</value>
+  </data>
+  <data name="ToolbarCheckChangeChild">
+    <value>Fires when the checkbutton changes state.</value>
+  </data>
+  <data name="ToolbarCheckChangeGroup">
+    <value>Fires when a checkbutton in the group changes state.</value>
+  </data>
+  <data name="ToolbarItems">
+    <value>Contents of the toolbar.</value>
+  </data>
+  <data name="ToolbarOrientation">
+    <value>Direction that the toolbar is rendered.</value>
+  </data>
+  <data name="TreeAutoSelect">
+    <value>Whether or not the TreeView should automatically select a node when the keyboard moves the hover bar over the node.</value>
+  </data>
+  <data name="TreeCheck">
+    <value>Fires when a node's checkbox is checked.</value>
+  </data>
+  <data name="TreeCheckBox">
+    <value>Whether or not checkboxes should be shown next to each node.</value>
+  </data>
+  <data name="TreeChecked">
+    <value>Whether or not the node's checkbox is checked.</value>
+  </data>
+  <data name="TreeChildType">
+    <value>TreeNodeType to apply by default to all child nodes.</value>
+  </data>
+  <data name="TreeCollapse">
+    <value>Fires when a node is collapsed.</value>
+  </data>
+  <data name="TreeExpand">
+    <value>Fires when a node is expanded.</value>
+  </data>
+  <data name="TreeExpandable">
+    <value>How a node should handle expanding.</value>
+  </data>
+  <data name="TreeExpanded">
+    <value>Whether or not the node is expanded.</value>
+  </data>
+  <data name="TreeExpandedImageUrl">
+    <value>Node image to display when in the expanded state.</value>
+  </data>
+  <data name="TreeExpandLevel">
+    <value>Number of levels to expand the tree initially.</value>
+  </data>
+  <data name="TreeImageUrl">
+    <value>Node image to display when not selected or expanded.</value>
+  </data>
+  <data name="TreeIndent">
+    <value>If ShowLines is false, number of pixels to indent the tree at each level.</value>
+  </data>
+  <data name="TreeInvalidIndexFormat">
+    <value>Invalid node index "{0}".  Node index must consist of numbers separated by periods.</value>
+  </data>
+  <data name="TreeInvalidObject">
+    <value>Invalid object passed to GetNodeCollection().  Expected TreeView or TreeNode.</value>
+  </data>
+  <data name="TreeInvisibleSelectedNode">
+    <value>The node at index {0} is not currently displayed in the tree.  SelectedNodeIndex cannot be set to an undisplayed node (all parents of a selected node must be expanded).</value>
+  </data>
+  <data name="TreeMissingOuterContainer">
+    <value>The XML loaded from TreeNodeSrc={0}, TreeNodeXslSrc={1} did not contain the required outer &lt;TREENODES&gt; container.</value>
+  </data>
+  <data name="TreeNavigateUrl">
+    <value>URL to navigate to when the node is selected.</value>
+  </data>
+  <data name="TreeNodeAlreadyInCollection">
+    <value>Attempted to add a TreeNode to a second TreeNodeCollection.  A TreeNode can belong to only one TreeNodeCollection.  Remove the TreeNode from its old collection before adding it to a new one.</value>
+  </data>
+  <data name="TreeNodes">
+    <value>Collection of child TreeNodes.</value>
+  </data>
+  <data name="TreeNodeSrc">
+    <value>URL of the XML file to import as content.</value>
+  </data>
+  <data name="TreeNodeTypeName">
+    <value>Name of the TreeNodeType</value>
+  </data>
+  <data name="TreeNodeTypes">
+    <value>Collection of TreeNodeTypes that define sets of properties inherited by TreeNodes.</value>
+  </data>
+  <data name="TreeNodeTypeSrc">
+    <value>URL of the XML file to import into the TreeNodeTypes collection.</value>
+  </data>
+  <data name="TreeNodeXslSrc">
+    <value>URL of the XSL transform file to apply to the XML file specified in TreeNodeSrc.</value>
+  </data>
+  <data name="TreeSelectedImageUrl">
+    <value>Node image to display when in the selected state.</value>
+  </data>
+  <data name="TreeSelectedIndexChanged">
+    <value>Fires when the tree's selected node changes.</value>
+  </data>
+  <data name="TreeSelectedNodeIndex">
+    <value>Dotted index of the initially selected node. (0.1 would select the second child of the first root node)</value>
+  </data>
+  <data name="TreeSelectExpands">
+    <value>Whether or not the TreeView should expand a node when it is selected.</value>
+  </data>
+  <data name="TreeShowLines">
+    <value>Whether or not the TreeView should display lines.</value>
+  </data>
+  <data name="TreeToolTip">
+    <value>Whether or not the TreeView should display a tooltip on parent nodes (for accessibility).</value>
+  </data>
+  <data name="TreeShowPlus">
+    <value>Whether or not the TreeView should show +/- buttons next to expandable nodes.</value>
+  </data>
+  <data name="TreeSystemImagesPath">
+    <value>Path to the folder containing the +/- and lines images.</value>
+  </data>
+  <data name="TreeTarget">
+    <value>ID of the window to target navigation.</value>
+  </data>
+  <data name="TreeType">
+    <value>The TreeNodeType from which to inherit properties.</value>
+  </data>
+  <data name="Unbound">
+    <value>Unbound</value>
+  </data>
+  <resheader name="ResMimeType">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="Version">
+    <value>1.0.0.0</value>
+  </resheader>
+  <resheader name="Reader">
+    <value>System.Resources.ResXResourceReader</value>
+  </resheader>
+  <resheader name="Writer">
+    <value>System.Resources.ResXResourceWriter</value>
+  </resheader>
+</root>

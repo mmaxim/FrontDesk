@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TestSuite xmlns="urn:frontdesk-result">
+	<Test>
+		<Name>testWebSearchNrank() - Runs the webcrawler for http://www.andrew.cmu.edu/user/dim/E-1.html 10.</Name>
+		<Points>2.0</Points>
+		<Time>20</Time>
+	</Test>
+	<Test>
+		<Name>testWebSearchNval() - Runs the webcrawler for http://www.andrew.cmu.edu/user/dim/E-1.html 10.</Name>
+		<Points>2.0</Points>
+		<Time>20</Time>
+	</Test>
+</TestSuite>
